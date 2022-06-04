@@ -11,7 +11,7 @@ function calculateChiSquared(expectedAndObservedData) {
 
   expectedAndObservedData.forEach((data) => {
     numerator = Math.pow(data.observed - data.expected, 2);
-    denominator = data.observed;
+    denominator = data.expected;
     chiSquaredSum += numerator / denominator;
   });
 
