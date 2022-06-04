@@ -6,13 +6,11 @@ Formula: χ2 = ∑(Oi – Ei)2/Ei
 
 function calculateChiSquared(expectedAndObservedData) {
   let chiSquaredSum = 0,
-  numerator,
-  denominator;
+  numerator;
 
   expectedAndObservedData.forEach((data) => {
     numerator = Math.pow(data.observed - data.expected, 2);
-    denominator = data.expected;
-    chiSquaredSum += numerator / denominator;
+    chiSquaredSum += numerator / data.expected;
   });
 
   return chiSquaredSum;
