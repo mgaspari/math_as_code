@@ -4,7 +4,7 @@ Chisquared calculates the difference between the observed value and the expected
 Formula: χ2 = ∑(Oi – Ei)2/Ei
 */
 
-function calculateChiSquared(expectedAndObservedData) {
+module.exports = function(expectedAndObservedData) {
   let chiSquaredSum = 0,
   numerator;
 
@@ -15,5 +15,3 @@ function calculateChiSquared(expectedAndObservedData) {
 
   return chiSquaredSum;
 }
-
-export default calculateChiSquared;
